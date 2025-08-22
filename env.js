@@ -1,1 +1,0 @@
-export const DATABASE_URL = 'mongodb+srv://rklpoi5678:HzKgezSQw0icd05Y@codeitsprint.veiwzrz.mongodb.net/todo-api?retryWrites=true&w=majority&appName=codeitSprint'
