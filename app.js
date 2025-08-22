@@ -1,10 +1,10 @@
 import express from "express";
 import mongoose from 'mongoose';
-import { DATABASE_URL } from "./env.js";
-import mockTasks from './data/mock.js';
 import Task from './models/Task.js';
+import * as dotenv from 'dotenv';
 
-mongoose.connect(DATABASE_URL).then(() => console.log('Connected DB!'));
+dotenv.config();
+mongoose.connect(process.env.DATABASE_URL).then(() => console.log('Connected DB!'));
 
 const app = express();
 app.use(express.json())

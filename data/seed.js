@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
 import data from './mock.js';
 import Task from '../models/Task.js';
-import { DATABASE_URL } from '../env.js';
+import * as dotenv from 'dotenv';
 
-mongoose.connect(DATABASE_URL);
+dotenv.config();
+mongoose.connect(process.env.DATABASE_URL);
 
 await Task.deleteMany({});
 await Task.insertMany(data);
